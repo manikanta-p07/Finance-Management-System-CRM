@@ -1,4 +1,4 @@
-# 📘 Finance Management System – Phase 2: Salesforce Org Setup & Configuration
+#  Finance Management System – Phase 2: Salesforce Org Setup & Configuration
 
 This document explains the setup and configuration completed in **Phase 2** for the Finance Management System project. The goal of this phase was to set up a Salesforce Developer Org, configure a custom app, and create the required objects, fields, and permissions.
 
@@ -49,7 +49,7 @@ This document explains the setup and configuration completed in **Phase 2** for 
 
 ---
 
-## ✅ Deliverables for Phase 2
+##  Deliverables for Phase 2
 - Salesforce Developer Org setup completed.  
 - Finance Management System App created.  
 - Four custom objects configured with fields.  
@@ -59,4 +59,4 @@ This document explains the setup and configuration completed in **Phase 2** for 
 
 ---
 
-## 📂 Repository Structure
+
