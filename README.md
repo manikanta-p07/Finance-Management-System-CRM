@@ -1,18 +1,102 @@
-# Salesforce DX Project: Next Steps
+# 📘 Finance Management System – Salesforce CRM
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## 🎯 Target Users
+- Fund Managers  
+- Finance Agents  
+- Members (Customers)  
+- Regulators  
 
-## How Do You Plan to Deploy Your Changes?
+---
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## ❌ Problem Statement
+Chit funds and microfinance organizations often face challenges due to manual processes:
+- Contributions are tracked in registers or spreadsheets, leading to errors.  
+- Payment reminders are delayed or missed, causing defaults.  
+- Auctions are conducted offline, limiting transparency and slowing decision-making.  
+- Managers lack dashboards for tracking collections, payouts, and overdue payments.  
 
-## Configure Your Salesforce DX Project
+These inefficiencies reduce trust, delay collections, and limit scalability.  
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+---
 
-## Read All About It
+## ✅ Proposed Solution: Salesforce-Based Finance Management System
+A Salesforce-based Finance Management System addresses these issues by:
+- Centralizing all member, contribution, and auction records.  
+- Automating SMS/Email reminders for upcoming payments and auctions.  
+- Providing dashboards for collections, defaults, auctions, and fund performance.  
+- Offering role-based access for managers, agents, and members.  
+- Improving transparency and compliance with accurate digital records.  
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+---
+
+# 📌 Phase 1: Problem Understanding & Industry Analysis
+
+### 1. Requirement Gathering
+- Digitalize member profiles, contributions, and auctions in Salesforce.  
+- Automate reminders and notifications for payments and auctions.  
+- Provide dashboards and reports for fund managers.  
+- Enable agents to quickly record contributions and missed payments.  
+- Ensure scalability and compliance with chit fund regulations.  
+
+---
+
+### 2. Stakeholder Analysis
+**Primary Stakeholders (Direct Users):**
+- **Fund Managers (Admin):** Need full visibility of collections, auctions, and defaults.  
+- **Finance Agents (Users):** Require tools to record contributions and follow up on missed payments.  
+- **Members (Customers):** Expect timely reminders, confirmations, and transparency in auctions.  
+- **Regulators (Indirect Stakeholders):** Require accurate digital records for auditing and compliance.  
+
+---
+
+### 3. Business Process Mapping
+**Current Process:**
+- Contributions recorded manually in books or spreadsheets.  
+- Reminders sent via phone calls or manual SMS.  
+- Auctions conducted offline with limited transparency.  
+- Reports generated monthly, often delayed and error-prone.  
+
+**Proposed Salesforce Process:**
+- Member contributions recorded directly as Salesforce records.  
+- Automated SMS/Email reminders triggered for due payments.  
+- Auctions managed digitally with real-time notifications and updates.  
+- Dashboards generated automatically for collections, auctions, and overdue accounts.  
+
+---
+
+### 4. Use Cases
+1. **Member Management**
+   - Register members with details (Name, Contact, KYC ID, etc.).  
+   - Track membership status (Active/Inactive).  
+
+2. **Contribution Management**
+   - Record contribution amounts, due dates, and payment modes.  
+   - Mark payments as Paid, Pending, or Overdue.  
+
+3. **Auction Management**
+   - Schedule auctions and notify eligible members.  
+   - Track winner details and disbursed amounts.  
+   - Mark auction as Open or Closed.  
+
+4. **Notification Management**
+   - Send SMS/Email reminders for due payments and auctions.  
+   - Track notification delivery and status (Sent/Failed).  
+
+5. **Reporting & Dashboards**
+   - Monitor total contributions, overdue payments, and auctions.  
+   - Show member activity and agent performance.  
+   - Provide compliance-ready audit reports.  
+
+---
+
+### 5. AppExchange Exploration
+- **Loan Management Apps** – Useful for tracking repayment cycles and overdue collections.  
+- **Payment Processing Apps** – Enable digital payment tracking (UPI, Bank Transfer, Cards).  
+- **Notification Apps (SMS/Email Integrations)** – Automate member communication.  
+- **Financial Dashboards** – Prebuilt templates to visualize fund performance and collections.  
+
+This confirms the project is **unique**, addressing a gap in the market with **chit fund–specific automation**.  
+
+---
+
+
