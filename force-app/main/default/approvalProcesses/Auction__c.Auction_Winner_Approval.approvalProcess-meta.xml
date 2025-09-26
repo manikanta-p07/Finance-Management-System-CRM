@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Fund_Manager</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Owner</field>
+        <field>Winner__c</field>
+        <field>Name</field>
+        <field>Disbursed_Amount__c</field>
+        <field>Status__c</field>
+        <field>Notes__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <label>Fund Manager Approval</label>
+        <name>Fund_Manager_Approval</name>
+    </approvalStep>
+    <description>Approves the winner before disbursal.</description>
+    <emailTemplate>unfiled$public/SalesforceSchedulerCreateApptEmailTemplate</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND(
+   ISPICKVAL(Status__c, &quot;Closed&quot;),
+   NOT(ISBLANK(Winner__c))
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Auction_Winner_Approved</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Change_field</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Auction_Winner_Rejected</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Field_Change</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Auction Winner Approval</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>fund_manger__c</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>0</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

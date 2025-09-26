@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Due_Date_For_Pending</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Status__c, &quot;Pending&quot;),
+    ISBLANK(Due_Date__c)
+)</errorConditionFormula>
+    <errorDisplayField>Due_Date__c</errorDisplayField>
+    <errorMessage>Due Date is required for Pending contributions.</errorMessage>
+</ValidationRule>
